@@ -1,5 +1,5 @@
 setup:
-    python3 -m venv ~/.container-revolution-devops
+	python -m venv ~/.devops
 
 install:
     pip install --upgrade pip &&\
