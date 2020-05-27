@@ -21,7 +21,7 @@ test-circleci:
 	@cd tests; pytest -vv --cov-report html:$$CIRCLE_ARTIFACTS --cov=web --cov=nlib test_*.py  
 
 test:
-	@cd tests; pytest -vv --cov-report term-missing --cov=web --cov=nlib test_*.py
+	#@cd tests; pytest -vv --cov-report term-missing --cov=web --cov=nlib test_*.py
 
 install:
 	pip install -r requirements.txt 
