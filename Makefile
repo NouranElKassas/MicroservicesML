@@ -12,7 +12,8 @@ env:
 	which pylint
 
 lint:
-	pylint --load-plugins pylint_flask --disable=R,C hello.py
+	#pylint --load-plugins
+	pylint_flask --disable=R,C hello.py
 	#flask_app/*.py nlib csvcli
 
 lint-circleci:                                                              
