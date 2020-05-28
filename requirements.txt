@@ -16,4 +16,4 @@ pylint
 jupyter
 pytest-cov
 nbval
-
+pylint_flask

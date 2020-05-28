@@ -12,14 +12,15 @@ env:
 	which pylint
 
 lint:
-	pylint --load-plugins pylint_flask --disable=R,C hello.py nlib csvcli
+	pylint --load-plugins pylint_flask --disable=R,C hello.py 
+	#nlib csvcli
 	#flask_app/*.py nlib csvcli
 
 lint-circleci:                                                              
-	pylint --output-format=parseable --load-plugins pylint_flask --disable=R,C hello.py nlib csvcli > $$CIRCLE_ARTIFACTS/pylint.html  
+	#pylint --output-format=parseable --load-plugins pylint_flask --disable=R,C hello.py nlib csvcli > $$CIRCLE_ARTIFACTS/pylint.html  
 	#flask_app/*.py
 test-circleci:
-	@cd tests; pytest -vv --cov-report html:$$CIRCLE_ARTIFACTS --cov=web --cov=nlib test_*.py  
+	#@cd tests; pytest -vv --cov-report html:$$CIRCLE_ARTIFACTS --cov=web --cov=nlib test_*.py  
 
 test:
 	#@cd tests; pytest -vv --cov-report term-missing --cov=web --cov=nlib test_*.py
