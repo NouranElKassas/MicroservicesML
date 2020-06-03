@@ -11,4 +11,4 @@ docker build --tag=demolocal .
 docker images ls
 # Step 3: 
 # Run flask app
-docker run -it demolocal bash
+docker run -p 8080:80 demolocal
