@@ -4,6 +4,11 @@ juypter:
 setup:
 	python3 -m venv ~/.devops
 	
+install:
+	# This should be run from inside a virtualenv
+	pip install --upgrade pip &&\
+pip install -r requirements.txt
+
 env:
 	#Show information about environment
 	which python3
@@ -12,7 +17,8 @@ env:
 	which pylint
 
 lint:
-	pylint --load-plugins pylint_flask --disable=R,C,W1203 hello.py 
+	hadolint Dockerfile
+	pylint --load-plugins pylint_flask --disable=R,C app.py 
 	#nlib csvcli
 	#flask_app/*.py nlib csvcli
 
