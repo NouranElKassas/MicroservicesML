@@ -12,7 +12,7 @@ env:
 	which pylint
 
 lint:
-	pylint --load-plugins pylint_flask --disable=R,C,W1203 app.py 
+	pylint --load-plugins pylint_flask --disable=R,C,W1203 hello.py 
 	#nlib csvcli
 	#flask_app/*.py nlib csvcli
 
