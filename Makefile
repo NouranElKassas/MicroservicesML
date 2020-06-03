@@ -12,6 +12,7 @@ env:
 	which pylint
 
 lint:
+	hadolint Dockerfile
 	pylint --load-plugins pylint_flask --disable=R,C hello.py 
 	#nlib csvcli
 	#flask_app/*.py nlib csvcli
